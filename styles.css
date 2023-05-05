@@ -1,0 +1,43 @@
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #F3f5fc;
+}
+
+.texto{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #F3f5fc;
+}
+
+.texto::placeholder {
+    color: #0a3871;
+}
+
+.texto:focus,
+.texto:active {
+    border: none;
+    outline: none;
+}
+
+.terminos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:  0px;
+    gap: 8px; /* espaciamiento interno */
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
