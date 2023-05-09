@@ -14,15 +14,38 @@
     <body>
         <div class="container">
 
+            <div class="container-tittle">
+                <a class="Encriptador-titulo">Encriptador de Texto</a>
+            </div>
+
+            <div class="container-bar">
+                <input type="checkbox" id="btn-social">
+                <label for="btn-social" class="icon-play"></label>
+                    <div class="icon-social">
+                        <a href="https://www.linkedin.com/in/noel-mazariegos/" target="_blank" class="icon-linkedin">
+                            <span id="tittle"></span>
+                        </a>
+                        <a href="https://github.com/Noel1kt" target="_blank" class="icon-github">
+                            <span id="tittle"></span>
+                        </a>
+                        <a href="https://www.instagram.com/noel1kt/" target="_blank" class="icon-instagram">
+                            <span id="tittle"></span>
+                        </a>
+                        <a href="https://github.com/Noel1kt/Encriptador" target="_blank" class="icon-portfolio">
+                            <span id="tittle"></span>
+                        </a>
+                    </div>
+                </div>
+
             <div class="encriptar">
                 <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
                 <div class="terminos">
-                <p>Solo letras minúsculas y sin acéntos</p>
+                <p> &#9888 Solo letras minúsculas y sin acéntos</p>
                 </div>
 
                 <div class="botones">
                     <button class="btn-encriptar" type="button" onclick = "encriptar()">
-                        Encriptar
+                        <p>Encriptar</p>
                     </button>
                     
                     <input 
@@ -33,19 +56,26 @@
                 </div>
             </div>
 
-            <div class="encriptado">
+            <div class="respuesta">
+                <textarea readonly name="mensaje"
+                    id="mensaje" 
+                    cols="30" 
+                    rows="10"
+                    class="mensaje">
+                </textarea>
+                <button class="btn-respuesta" id="btn-respuesta" type="button" onclick ="copyText()">
+                    <p>Copiar</p>
+                </button>
+                
+            </div>
+
+            <div class="encriptado" id="encriptado">
                 <img src="img/muñeco.png" alt="" id="imagen">
                 <div class="mensaje-encriptado" id="mensaje-encriptado">
                     <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
                     <p id="parrafo">
                         Ingresa el texto que deseas encriptar o desencriptar
                     </p>
-                    <!-- <textarea name="mensaje"
-                    id="mensaje" 
-                    cols="30" 
-                    rows="10"
-                    class="mensaje">
-                    </textarea> -->
                 </div>
             </div>
         </div>

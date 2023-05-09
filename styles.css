@@ -1,8 +1,145 @@
+.Encriptador-titulo{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 20ch;
+    animation: typing 3s steps(20), 
+blink .5s infinite step-end alternate,
+hide-cursor 0s 5s forwards;
+    overflow: hidden;
+    font-size: 50px;
+    color: #76c893;
+    margin-left: 23%;
+    font-weight: bold;
+    position: relative;
+    top: 35px;
+    
+}
+
+@keyframes typing {
+    from { width: 0;}
+}
+
+@keyframes blink {
+    50% { border-color: transparent;}
+}
+
+@keyframes hide-cursor {
+    to { border-color: transparent; }
+}
+
+.container-bar {
+    width: 100%;
+    max-width: 55px;
+    left: 5px;
+    position: fixed;
+    top: 17.5%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container-bar a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: all 500ms ease;
+    color: #fff;
+}
+
+.container-bar a:hover{
+    filter: brightness(75%);
+    animation: destello infinite ease-out;
+  }
+  
+  @keyframes destello {
+    0% {
+      filter: brightness(75%);
+    }
+    50% {
+      filter: brightness(150%);
+    }
+    100% {
+      filter: brightness(150%);
+    }
+  }
+
+.container-bar .icon-linkedin{
+    background-image: url('img/linkedin.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    margin-top: 13px;
+}
+.container-bar .icon-github{
+    background: white;
+    background-image: url('img/github-sign.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    outline: none;
+    margin-top: 13px;
+}
+.container-bar .icon-instagram{
+    background-image: url('img/instagram.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+    margin-top: 13px;
+}
+.container-bar .icon-portfolio{
+    background: white;
+    background-image: url('img/portfolio.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    margin-top: 13px;
+}
+
+#btn-social{
+    display: none;
+}
+
+.container-bar label.icon-play{
+    background-image: url("img/play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+    padding-left: 30px;
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.container-bar #btn-social:checked + label.icon-play {
+    transform: translateX(-10px) rotateY(180deg);
+}
+
+.icon-social{
+    transition: 0.4s ;
+    transform: translateX(-150%);
+}
+
+.container-bar #btn-social:checked ~ .icon-social {
+    transform: translateX(0%);
+    margin-left: 50px;
+}
+  
 .container{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: #916cad;
+    background: #023047;
 }
 
 .texto{
@@ -19,19 +156,21 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
-    background-color: #F3f5fc;
-    box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.3);
+    background-color: #023047;
+    /*box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.3);*/
     border-radius: 15px;
+    transition: 0.5s;
 }
 
 .texto::placeholder {
-    color: #523874;
+    color: white;
 }
 
 .texto:focus,
 .texto:active {
     border: none;
     outline: none;
+    color: white;
 }
 
 .terminos {
@@ -42,7 +181,7 @@
     gap: 8px; /* espaciamiento interno */
     position: absolute;
     width: 80%;
-    left: 15%;
+    left: 12%;
     top: 80%; 
 }
 
@@ -52,7 +191,7 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
-    color: #8dc669;
+    color: white;
     opacity: 1;
     flex: none;
     order: 1;
@@ -75,13 +214,13 @@
     justify-content: center;
     padding: 2%;
     gap: 8px;
-    width: 25%;
-    background-color: #523874;
-    border-radius: 24px;
+    width: 30%;
+    background-color: #76c893;
+    border-radius: 15px;
     border: none;
     font-family: "Inter";
-    font-size: 18px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 5px;
     text-align: center;
     color: white;
     margin-right: 17px;
@@ -98,27 +237,94 @@
     justify-content: center;
     padding: 2%;
     gap: 8px;
-    width: 25%;
+    width: 30%;
     background: #d8dfe8;
-    border: 1px solid #523874;
-    border-radius: 24px;
+    border: 1px solid #76c893;
+    border-radius: 15px;
     font-family: "Inter";
     font-weight: 400;
-    font-size: 18px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 5px;
     text-align: center;
-    color: #523874;
-    margin-right: 17px;
+    color: #58946d;
+    margin-right: 20px;
     transition: 0.5s;
     box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-desencriptar:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .btn-encriptar:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
+}
+
+.respuesta {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 65%;
+    top: 5%;
+    background: #76c893;
+    box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+    transition: 0.5s;
+    /*display: none;*/
+}
+
+.btn-respuesta{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 30%;
+    height: 40px;
+    margin-top: 130%;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 5px;
+    text-align: center;
+    color: #76c893;
+    margin-right: 17px;
+    transition: 0.5s;
+    box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-respuesta:hover{
+    transform: scale(1.01);
+}
+
+.mensaje{
+    position: absolute;
+    width: 75%;
+    height: 70%;
+    left: 10%;
+    top: 5%;
+    border: none;
+    padding: 15px;
+    resize: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #76c893;
+    /*box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.3);*/
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.mensaje:focus,
+.mensaje:active {
+    border: none;
+    outline: none;
+    color: white;
 }
 
 .encriptado{
@@ -127,10 +333,10 @@
     position: absolute;
     width: 30%;
     height: 90%;
-    left: 60%;
+    left: 65%;
     top: 5%;
-    background: #c7fba5;
-    box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.5);
+    background: #76c893;
+    box-shadow: 0px 34px 42px -8px rgba(0, 0, 0, 0.2);
     border-radius: 32px;
     transition: 0.5s;
 }
