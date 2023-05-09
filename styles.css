@@ -10,7 +10,7 @@ hide-cursor 0s 5s forwards;
     overflow: hidden;
     font-size: 50px;
     color: #76c893;
-    margin-left: 23%;
+    margin-left: 17%;
     font-weight: bold;
     position: relative;
     top: 35px;
@@ -389,6 +389,16 @@ hide-cursor 0s 5s forwards;
 }
 
 /* Responsive desing */
+
+@media only screen 
+and (min-width : 1224px) {
+    .Encriptador-titulo{
+        display: flex;
+        flex-direction: row;
+        font-size: 45px;
+        margin-left: 17%;
+    }
+}
 
 @media (max-width: 57.5em) {
 
