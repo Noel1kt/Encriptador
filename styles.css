@@ -391,7 +391,14 @@ hide-cursor 0s 5s forwards;
 /* Responsive desing */
 
 @media (max-width: 57.5em) {
-    .container{
+
+    .Encriptador-titulo{
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+    }
+
+    .container {
         display: flex;
         flex-direction: row;
        
@@ -403,7 +410,7 @@ hide-cursor 0s 5s forwards;
 
     .texto {
         width: 80%;
-        height: 60%;
+        height: 50%;
         left: 7%;
         top: 10%;
     }
@@ -411,26 +418,27 @@ hide-cursor 0s 5s forwards;
     .terminos {
         width: 80%;
         left: 10%;
-        top: 75%;
+        top: 64%;
     }
 
     .terminos p{
-        font-size: 16px;    
+        font-size: 13px;  
     }
 
     .botones {
         width: 80%;
         left: 10%;
-        top: 78%;
+        top: 67%;
+        height: 40px;
     }
 
     .btn-encriptar,
     .btn-desencriptar {
         width: 48%;
+        height: 35px;
         border-radius: 16px;
         margin-right: 17px;
-       
-
+    
     }
 
     .btn-encriptar:hover,
@@ -443,16 +451,32 @@ hide-cursor 0s 5s forwards;
 
     .encriptado {
         width: 80%;
-        height: 15%;
+        height: 24%;
         left: 10%;
-        top: 84%;
+        top: 76%;
+
+    }
+    .respuesta {
+        width: 80%;
+        height: 24%;
+        left: 10%;
+        top: 76%;
 
     }
 
+    .btn-respuesta {
+        top: 75%;
+        margin-top: 43%;
+    }
+
     .mensaje-encriptado {
-        width: 100%;
+        width: 70%;
         top: 5%;
         padding: 1%;
+    }
+
+    .mensaje {
+        height: 40%;
     }
 
     .encriptado h2, .encriptado p {
