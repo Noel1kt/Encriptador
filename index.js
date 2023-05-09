@@ -5,6 +5,7 @@ function encriptar() {
     let muñeco = document.getElementById("imagen");
     let respuesta = document.getElementById("mensaje").value;
     let encriptado = document.getElementById("encriptado");
+    let respuestadiv = document.getElementById("respuesta");
   
     let textoCifrado = texto
       .replace(/e/gi, "enter")
@@ -13,14 +14,14 @@ function encriptar() {
       .replace(/o/gi, "ober")
       .replace(/u/gi, "ufat");
   
-    if (texto.length != 0) {
-      document.getElementById("mensaje").value = textoCifrado;
-      encriptado.style.display = "none"; 
-      
-    } else {
-      muñeco.src = "img/muñeco.png";
-      tituloMensaje.textContent = "Debes escribir un mensaje para poder encriptar";
-      parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+    if (texto.length != 0 && (/^[a-z\s]+$/.test(texto)) ) {
+        document.getElementById("mensaje").value = textoCifrado;
+        encriptado.style.display = "none"; 
+    }else {
+        muñeco.src = "img/muñeco.png";
+        tituloMensaje.textContent = "Solo permite letras minúsculas y sin acéntos";
+        parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
+        alert("Solo permite letras minúsculas y sin acéntos")
     }
   }
   
@@ -37,14 +38,14 @@ function encriptar() {
       .replace(/ober/gi, "o")
       .replace(/ufat/gi, "u");
     
-      if (texto.length != 0) {
+      if (texto.length != 0 && (/^[a-z\s]+$/.test(texto))) {
         document.getElementById("mensaje").value = textoCifrado;
         encriptado.style.display = "none"; 
       } else {
         muñeco.src = "img/muñeco.png";
-        tituloMensaje.textContent = "Ningún mensaje fue encontrado";
+        tituloMensaje.textContent = "Solo permite letras minúsculas y sin acéntos";
         parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-        swal("Ooops!", "Debes ingresar un texto", "warning");
+        alert("Solo permite letras minúsculas y sin acéntos")
       }
   }
 
